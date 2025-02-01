@@ -6,7 +6,6 @@ function Donor() {
   const [userType, setUserType] = useState(""); // Donor or Recipient
   const [bloodtype, setBloodType] = useState(""); // Blood type dropdown selection
   const [location, setLocation] = useState(null); // Location state
-  const [error, setError] = useState(""); // Error state
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,7 +39,7 @@ function Donor() {
     }
 
     if (!location) {
-      alert("Location is not available. Please enable location services.");
+      alert("Location is not available. Please enable location service.");
       return;
     }
 

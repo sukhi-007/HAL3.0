@@ -1,3 +1,4 @@
+
 import express from 'express';
 import cors from 'cors';
 import { pool } from './db.js';
@@ -34,6 +35,7 @@ app.post('/signup', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     try {
+        console.log(req.body);
         const { email, passkey } = req.body;
         const user = await pool.query(
             'SELECT * FROM users WHERE email=$1',

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 function Location({ onLocationSave }) {
-  const [location, setLocation] = useState(null); 
-  const [permissionStatus, setPermissionStatus] = useState(''); 
-  const [error, setError] = useState(''); 
+  const [location, setLocation] = useState(null);
+  const [permissionStatus, setPermissionStatus] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if ("geolocation" in navigator) {
